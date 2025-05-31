@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- for parallel execution add only parallel="tests" in suit tag -->
+<suite name="Suite" thread-count="5" parallel="tests">
+  
+  <test name="chromeTest">
+    <!-- we will received both below methods in TestBaseClass before setUp() method @Parameters({"os", "browser"}) -->
+
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="chrome"></parameter> <!-- pass the browser value here to run test cases on specific browser-->
+    
+    <classes>
+      <class name="testCases.TC001_AccountRegistrationTest"/>
+    </classes>
+  
+  </test> <!-- Test -->
+  <test name="edgeTest">
+    <!-- we will received both below methods in TestBaseClass before setUp() method @Parameters({"os", "browser"}) -->
+
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="edge"></parameter> <!-- pass the browser value here to run test cases on specific browser-->
+    
+    <classes>
+      <class name="testCases.TC001_AccountRegistrationTest"/>
+    </classes>
+  
+  </test> <!-- Test -->
+  <test name="fireFoxTest">
+    <!-- we will received both below methods in TestBaseClass before setUp() method @Parameters({"os", "browser"}) -->
+
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="firefox"></parameter> <!-- pass the browser value here to run test cases on specific browser-->
+    
+    <classes>
+      <class name="testCases.TC001_AccountRegistrationTest"/>
+    </classes>
+  
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
