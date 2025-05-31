@@ -23,7 +23,7 @@
           <!-- specify which .xml we are going to use for execute-->
           <configuration>
 			<suiteXmlFiles>
-				<suiteXmlFile>master.xml</suiteXmlFile>
+				<suiteXmlFile>master.xml</suiteXmlFile> <!-- we can add here multiple .xml files-->
 			</suiteXmlFiles>
 		  </configuration>
         </plugin>
